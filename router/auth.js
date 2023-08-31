@@ -103,7 +103,7 @@ router.post('/login', async (req, res) => {
             }
             else {
                 const token = await userLogin.generateAuthToken();
-                res.cookie("jwt", token, { expires: "5h" });
+                res.cookie("jwt", token, { expiresIn: "5h" });
 
                 res.json({ message: "Login successful" });
             }
