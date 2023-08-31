@@ -6,7 +6,9 @@ const app = express();
 //Getting config.env
 dotenv.config({ path: './config.env' });
 
-app.use(cors())
+app.use(cors({
+    origin:'*'
+}))
 
 //Accepting JSON
 app.use(express.json());
