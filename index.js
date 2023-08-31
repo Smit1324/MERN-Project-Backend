@@ -6,10 +6,7 @@ const app = express();
 //Getting config.env
 dotenv.config({ path: './config.env' });
 
-app.use(cors({
-    origin: process.env.BASE_URL,
-    credentials: true
-}))
+app.use(cors())
 
 //Accepting JSON
 app.use(express.json());
