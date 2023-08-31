@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 //Getting config.env
-dotenv.config({path:'./config.env'});
+dotenv.config({ path: './config.env' });
 
 //Accepting JSON
 app.use(express.json());
@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(require('./router/auth'));
 
 // Securing KEY and PORT no
-const PORT=process.env.PORT;
+const PORT = process.env.PORT || 5000;
 
 //Middleware
 // const middleware = (req, res, next) => {
