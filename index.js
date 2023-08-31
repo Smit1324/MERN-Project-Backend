@@ -7,7 +7,7 @@ const app = express();
 dotenv.config({ path: './config.env' });
 
 app.use(cors({
-    origin:'*'
+    origin: process.env.BASE_URL
 }))
 
 //Accepting JSON
